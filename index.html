@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>bookmarker</h1>
+    </header>
+    <main>
+      <div class="container">
+        <section class="section addUrl">
+          <div class="sectionHeader">
+            <i class="fa-solid fa-bookmark"></i>
+            <h2>Bookmark your favorite sites</h2>
+            <i class="fa-solid fa-bookmark"></i>
+          </div>
+          <form>
+            <div class="formControl">
+              <label for="bookmarkName"
+                ><i class="fa-solid fa-book"></i>Site Name</label
+              >
+              <input type="text" id="bookmarkName" placeholder="Google" />
+            </div>
+            <div class="formControl">
+              <label for="bookmarkUrl"
+                ><i class="fa-solid fa-link"></i>Site URL</label
+              >
+              <input
+                type="text"
+                id="bookmarkUrl"
+                placeholder="www.google.com"
+              />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+        <section class="section modifyURL">
+          <table>
+            <thead>
+              <tr>
+                <th>index</th>
+                <th>website name</th>
+                <th>visit</th>
+                <th>delete</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+    <div class="overlayMsg">
+      <div class="overLayContent">
+        <div class="overlayIcons">
+          <div class="overlayIconsCircles">
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
+          </div>
+          <i class="fa-solid fa-xmark" id="close"></i>
+        </div>
+        <div class="overlayDes">
+          <h4>
+            Site Name or Url is not valid, Please follow the <br />
+            rules below :
+          </h4>
+          <p>
+            <i class="fa-regular fa-circle-right"></i>Site name must contain at
+            least 3 characters
+          </p>
+          <p>
+            <i class="fa-regular fa-circle-right"></i>Site URL must be a valid
+            one
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
